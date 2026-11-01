@@ -25,5 +25,4 @@
 - Repository structure created.
 - Day 01 learning materials prepared.
 
-Status: In Progress
-
+Status: Completed

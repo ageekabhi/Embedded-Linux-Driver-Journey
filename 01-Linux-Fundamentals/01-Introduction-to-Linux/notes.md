@@ -60,7 +60,30 @@ Linux is widely used in embedded systems because it provides:
 - Device driver support
 - Filesystem support
 
-## 7. Practical Implementation
+
+
+## 7. Basic Linux Architecture
+
+Linux can be understood through the following layers:
+
+1. **Hardware:** CPU, RAM, storage devices, sensors and peripherals.
+2. **Linux Kernel:** Manages hardware, processes, memory, interrupts and device drivers.
+3. **System Call Interface:** Allows user-space programs to request services from the kernel.
+4. **System Libraries:** Provide functions that applications use to access operating system services.
+5. **User Space:** Contains shells, utilities and applications that run outside the kernel.
+
+### How They Interact
+
+When a user-space application needs to access hardware, it may use a system library or directly invoke a system call. The kernel handles the request and interacts with the relevant device driver.
+
+### Important Concept
+
+- Kernel space: Where the Linux kernel and its drivers execute.
+- User space: Where normal applications and utilities execute.
+
+Device drivers can be implemented inside the kernel or, in some cases, in user space.
+
+## 8. Practical Implementation
 
 Created a Bash script to retrieve:
 
@@ -74,7 +97,7 @@ Created a Bash script to retrieve:
 
 Program: `practical/day01_system_info.sh`
 
-## 8. Important Questions
+## 9. Important Questions
 
 1. What is Linux?
 2. What is an operating system?
@@ -84,6 +107,7 @@ Program: `practical/day01_system_info.sh`
 6. What is a device driver?
 7. Why is Linux used in embedded systems?
 
-## 9. My Learning Summary
+## 10. My Learning Summary
 
 Today I learned the basic concepts of Linux, the role of the kernel, Linux distributions, the major architectural layers and the importance of device drivers in embedded systems.
+

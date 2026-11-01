@@ -3,10 +3,9 @@
 #Embedded Linux Journey 
 #Day 1: Linux System Introduction
 
-echo"======================================"
-echo"      LINUX SYSTEM INTRODUCTION       "
-echo"======================================"
-
+echo "======================================"
+echo "       LINUX SYSTEM INTRODUCTION       "
+echo "======================================"
 echo ""
 echo "Operating System:"
 grep PRETTY_NAME /etc/os-release
