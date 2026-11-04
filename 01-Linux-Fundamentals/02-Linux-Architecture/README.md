@@ -2,60 +2,92 @@
 
 ## Overview
 
-This topic explains the internal architecture of Linux,
-the interaction between user space and kernel space,
-system calls, kernel responsibilities, and hardware
-device representation.
+This topic explores the internal architecture of Linux, the interaction between user space and kernel space, system calls, kernel responsibilities, virtual filesystems, and hardware device representation.
+
+It builds the foundation required to understand Linux kernel internals, kernel module development, and embedded Linux device drivers.
 
 ## Learning Objectives
 
-- Understand user space and kernel space.
-- Understand system calls and their purpose.
-- Understand Linux kernel responsibilities.
-- Understand monolithic kernel architecture.
-- Learn the Linux boot process.
-- Explore procfs, sysfs, and devtmpfs/devices.
-- Understand device nodes and major/minor numbers.
-- Explore I2C interfaces and kernel modules.
-- Inspect Linux kernel messages.
+- Understand the architecture of a Linux operating system.
+- Differentiate user space and kernel space.
+- Understand the purpose and operation of system calls.
+- Explore major responsibilities of the Linux kernel.
+- Understand monolithic kernel architecture and loadable modules.
+- Understand Linux virtual filesystems: procfs and sysfs.
+- Explore the Linux device model.
+- Understand character devices, block devices, and device numbers.
+- Understand the Linux I2C subsystem and device interfaces.
+- Learn the stages of the Linux boot process.
+- Understand kernel modules and kernel logging.
 
 ## Topics Covered
 
-1. User Space vs Kernel Space
-2. System Calls
-3. Linux Kernel Responsibilities
-4. Monolithic Kernel Architecture
-5. Linux Boot Process
-6. procfs
-7. sysfs
-8. /dev and Device Nodes
-9. Major and Minor Device Numbers
-10. Kernel Modules
-11. Kernel Messages
-12. I2C Device Interfaces
+1. Linux System Architecture
+2. User Space vs Kernel Space
+3. System Calls
+4. Linux Kernel Responsibilities
+5. Linux Kernel Architecture
+6. Linux Virtual Filesystems
+7. Linux Device Model
+8. Character Devices and Block Devices
+9. I2C Architecture in Linux
+10. Linux Boot Process
+11. Kernel Modules
+12. Kernel Logs
+13. Embedded Linux Relevance
 
 ## Practical Experiments
 
-- Inspect process information using /proc.
-- Inspect CPU and memory information.
-- Inspect system uptime.
-- Explore /sys/class.
-- Explore I2C interfaces.
-- Inspect /dev/i2c-* device nodes.
-- Inspect kernel modules.
-- Inspect boot information.
-- Explore kernel logs.
-- Trace system calls using strace.
+### Completed
 
-## Directory Structure
+- Inspected the current shell process using `ps`.
+- Explored process information through `/proc`.
+- Examined process status information.
+- Inspected CPU information through `/proc/cpuinfo`.
+- Inspected memory information through `/proc/meminfo`.
+- Examined system uptime through `/proc/uptime`.
+- Explored Linux sysfs directories.
+- Inspected available device classes through `/sys/class`.
+- Explored I2C interfaces through `/sys/class/i2c-dev`.
+- Inspected I2C device nodes under `/dev`.
 
-- README.md: Topic overview
-- notes.md: Detailed theory and explanations
-- practical/: Linux commands and experiments
-- exercises/: Practice questions and exercises
+### Planned
+
+- Explore the I2C bus and driver directories under `/sys/bus`.
+- Inspect device-node metadata using `stat`.
+- Explore loaded kernel modules using `lsmod`.
+- Inspect kernel module information under `/sys/module`.
+- Examine boot and service information.
+- Inspect kernel messages using `dmesg` and `journalctl`.
+- Trace system calls using `strace`.
+
+## Repository Structure
+
+```text
+02-Linux-Architecture/
+├── README.md
+├── notes.md
+├── practical/
+│   └── day02_commands.md
+└── exercises/
+    └── questions.md
+```
+
+| File | Purpose |
+|---|---|
+| `README.md` | Topic overview and learning progress |
+| `notes.md` | Detailed theory and technical explanations |
+| `practical/day02_commands.md` | Commands, experiments, and observations |
+| `exercises/questions.md` | Conceptual and practical exercises |
 
 ## Learning Outcome
 
-Understand how Linux applications interact with
-the kernel and how the kernel represents and
-manages hardware devices and drivers.
+Develop a foundational understanding of how Linux applications interact with the kernel, how the kernel manages system resources, and how hardware devices are represented through Linux kernel interfaces.
+
+This knowledge prepares for advanced study of Linux kernel internals, kernel modules, and device driver development.
+
+## Progress
+
+**Status:** In Progress
+
+Theory and initial `/proc`, `/sys`, and `/dev` explorations have been documented. Additional practical experiments and deeper study of system calls, boot processes, kernel modules, and kernel logs remain.
